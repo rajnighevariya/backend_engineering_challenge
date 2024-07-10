@@ -1,11 +1,11 @@
 # Backend Engineering Challenge
 # Project Structure
 
-1.User Authentication Service
-2.Product Management Service
-3.Order Processing Service
+  1.User Authentication Service
+  2.Product Management Service
+  3.Order Processing Service
 
-Step 1: Setting Up the Project
+# Step 1: Setting Up the Project
   1.1 User Authentication Service
   auth-service/
   ├── src/
@@ -23,7 +23,7 @@ Step 1: Setting Up the Project
   ├── Dockerfile
   ├── package.json
 
-Step 2: Product Management Service
+# Step 2: Product Management Service
 
   product-service/
   ├── src/
@@ -41,7 +41,7 @@ Step 2: Product Management Service
   ├── Dockerfile
   ├── package.json
 
-Step 3: Order Processing Service
+# Step 3: Order Processing Service
 
   order-service/
   ├── src/
@@ -58,6 +58,39 @@ Step 3: Order Processing Service
   ├── .env
   ├── Dockerfile
   ├── package.json
+
+
+# Deployment Instructions
+  * Prerequisites
+      1.Docker installed on your local machine.
+      2.Docker Compose installed.
+      3.Git installed.
+  Step 1: Clone the Repository
+    git clone [<repository-url>](https://github.com/rajnighevariya/backend_engineering_challenge.git)
+    cd [<repository-folder>](https://github.com/rajnighevariya/backend_engineering_challenge.git)
+
+  Step 2: Set Up Environment Variables
+  Step 3: Create Docker Compose File
+  Step 4: Dockerfile for Each Service
+  Step 5: Build and Run the Services
+      docker-compose up --build
+  Step 6: Access the Services
+  Step 7: Deploying to Cloud (AWS Example)
+    * Using Elastic Beanstalk
+      1. Install AWS CLI and Elastic Beanstalk CLI:
+            pip install awsebcli
+      2. Initialize Elastic Beanstalk:
+            eb init -p docker your-app-name
+      3. Create an Environment:
+            eb create your-environment-name
+      4. Deploy:
+            eb deploy
+  Step 8: Monitoring and Logging
+    1. Use tools like Prometheus and Grafana for monitoring.
+    2. Configure CloudWatch for logging and monitoring on AWS.
+
+
+
 
 
 
