@@ -70,14 +70,19 @@ order-service/
 
 # Deployment Instructions
 
-- Prerequisites
-  1.Docker installed on your local machine.
-  2.Docker Compose installed.
-  3.Git installed.
-  Step 1: Clone the Repository
-  git clone [<repository-url>](https://github.com/rajnighevariya/backend_engineering_challenge.git)
-  cd [<repository-folder>](https://github.com/rajnighevariya/backend_engineering_challenge.git)
+## Prerequisites
 
+1. Docker installed on your local machine.
+2. Docker Compose installed.
+3. Git installed.
+
+## Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/rajnighevariya/backend_engineering_challenge.git
+cd backend_engineering_challenge
+
+```
 Step 2: Set Up Environment Variables
 Step 3: Create Docker Compose File
 Step 4: Dockerfile for Each Service
@@ -90,3 +95,4 @@ eb init -p docker your-app-name 3. Create an Environment:
 eb create your-environment-name 4. Deploy:
 eb deploy
 Step 8: Monitoring and Logging 1. Use tools like Prometheus and Grafana for monitoring. 2. Configure CloudWatch for logging and monitoring on AWS.
+
