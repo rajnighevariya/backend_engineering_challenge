@@ -46,7 +46,7 @@ product-service/
 ├── package.json
 
 ### 3. Order Processing Service
-
+```bash
 order-service/
 ├── src/
 │ ├── controllers/
@@ -62,7 +62,7 @@ order-service/
 ├── .env
 ├── Dockerfile
 ├── package.json
-
+```
 
 # Deployment Instructions
 
