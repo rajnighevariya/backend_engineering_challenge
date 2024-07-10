@@ -9,8 +9,9 @@
 ## Services
 
 ### 1. User Authentication Service
-
 1.1 User Authentication Service
+
+```bash
 auth-service/
 ├── src/
 │ ├── controllers/
@@ -26,9 +27,11 @@ auth-service/
 ├── .env
 ├── Dockerfile
 ├── package.json
+```
 
 ### 2. Product Management Service
 
+```bash
 product-service/
 ├── src/
 │ ├── controllers/
@@ -44,6 +47,7 @@ product-service/
 ├── .env
 ├── Dockerfile
 ├── package.json
+```
 
 ### 3. Order Processing Service
 ```bash
