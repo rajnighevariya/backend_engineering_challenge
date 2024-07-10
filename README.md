@@ -85,6 +85,21 @@ cd backend_engineering_challenge
 ```
 
 ## Step 2: Set Up Environment Variables
+```bash
+# .env file
+
+# MongoDB
+MONGO_URI=mongodb://mongo:27017/ecommerce
+
+# JWT Secret
+JWT_SECRET=your_jwt_secret
+
+# Service URLs
+PRODUCT_SERVICE_URL=http://product-service:3001
+ORDER_SERVICE_URL=http://order-service:3002
+AUTH_SERVICE_URL=http://auth-service:3003
+
+```
 
 ## Step 3: Create Docker Compose File
 
