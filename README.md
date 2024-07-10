@@ -89,6 +89,24 @@ cd backend_engineering_challenge
 ## Step 3: Create Docker Compose File
 
 ## Step 4: Dockerfile for Each Service
+```bash
+FROM node:14
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Expose port and start the service
+EXPOSE 3001
+CMD [ "npm", "start" ]
+
+```
 
 ## Step 5: Build and Run the Services
 
