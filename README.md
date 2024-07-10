@@ -103,6 +103,57 @@ AUTH_SERVICE_URL=http://auth-service:3003
 
 ## Step 3: Create Docker Compose File
 
+```bash
+version: "3"
+services:
+  auth-service:
+    build: ./auth-service
+    environment:
+      - PORT=3001
+      - MONGO_URI=mongodb://mongo:27017/auth-service
+      - JWT_SECRET=your_jwt_secret
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+
+  product-service:
+    build: ./product-service
+    environment:
+      - PORT=3002
+      - MONGO_URI=mongodb://mongo:27017/product-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - mongo
+
+  order-service:
+    build: ./order-service
+    environment:
+      - PORT=3003
+      - MONGO_URI=mongodb://mongo:27017/order-service
+    ports:
+      - "3003:3003"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - auth-service
+      - product-service
+      - order-service
+```
+
 ## Step 4: Dockerfile for Each Service
 ```bash
 FROM node:14
